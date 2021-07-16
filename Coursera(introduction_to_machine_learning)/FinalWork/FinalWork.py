@@ -9,7 +9,7 @@ from sklearn.preprocessing import StandardScaler
 ### Подход 1: градиентный бустинг "в лоб"
 
 print("Gradient boosting classifier: ")
-data = read_csv('./resource/features.csv')
+data = read_csv('resources/features.csv')
 data = data.drop(
     ["duration", "tower_status_radiant", "tower_status_dire", "barracks_status_radiant", "barracks_status_dire"],
     axis=1)

@@ -4,7 +4,7 @@ from numpy import *
 from pandas import read_csv
 from sklearn.metrics import roc_auc_score
 
-data = read_csv('./resource/data-logistic.csv', header=None)
+data = read_csv('resources/data-logistic.csv', header=None)
 y = data[0]
 x = data.loc[:, 1:2]
 

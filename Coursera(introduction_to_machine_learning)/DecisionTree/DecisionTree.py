@@ -6,7 +6,7 @@ def isNaN(num):
     return num != num
 
 
-data = read_csv('./resource/train.csv')
+data = read_csv('resources/train.csv')
 print(data.columns)
 
 df = DataFrame([])

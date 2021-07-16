@@ -3,7 +3,7 @@ from sklearn.model_selection import KFold, cross_val_score
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import scale
 
-data = DataFrame(read_csv('./resource/wine.data'))
+data = DataFrame(read_csv('resources/wine.data'))
 className = data.iloc[:, 0]
 features = scale(data.iloc[:, 1:14])
 
