@@ -10,7 +10,8 @@ def isNaN(num):
 
 data = read_csv('./resources/train.csv')
 
-df = DataFrame([])
+df = DataFrame()
+
 df['Pclass'] = data['Pclass']
 df['Fare'] = data['Fare']
 df['Age'] = data['Age']
