@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def getValidParamEstimate(model: BaseEstimator, X: pd.DataFrame, y: pd.DataFrame | list,
-                          param_name: str, param_range: range, scoring_name: str = 'neg_log_loss'):
+def showValidParamEstimate(model: BaseEstimator, X: pd.DataFrame, y: pd.DataFrame | list,
+                           param_name: str, param_range: range, scoring_name: str = 'neg_log_loss'):
     """
     Метод для получения графика влияния гиперпараметра на оценку обучения и оценку валидации
     :param model: Исследуемая модель
@@ -37,7 +37,7 @@ def getValidParamEstimate(model: BaseEstimator, X: pd.DataFrame, y: pd.DataFrame
     plt.fill_between(param_range, train_mean - train_std, train_mean + valid_std, color="red")
     plt.fill_between(param_range, valid_mean - valid_std, valid_mean + valid_std, color="gainsboro")
 
-    plt.title("Validation Curve With " + type(model).__name__)
+    plt.title("Validation Curve " + type(model).__name__)
     plt.xlabel("Number Of " + param_name)
     plt.ylabel(scoring_name)
     plt.tight_layout()
